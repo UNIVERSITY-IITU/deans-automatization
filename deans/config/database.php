@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'pgsql'),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -65,12 +65,12 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => env('postgres://gflpmldp:xrhRv_eTH1kVkgLUKi2HcFqhzGorad8a@rogue.db.elephantsql.com:5432/gflpmldp'),
-            'host' => env('DB_HOST', 'rogue.db.elephantsql.com'),
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'gflpmldp'),
-            'username' => env('DB_USERNAME', 'gflpmldp'),
-            'password' => env('DB_PASSWORD', 'xrhRv_eTH1kVkgLUKi2HcFqhzGorad8a'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
