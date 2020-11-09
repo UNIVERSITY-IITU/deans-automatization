@@ -20,9 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98761bee-e130-4e79-8ce9-a4ba9f2aa7cf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Flight.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,13 +148,18 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1k0t3zXtvyzS3yyjK3QpyR17alB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -174,7 +181,9 @@
       <updated>1604849144762</updated>
       <workItem from="1604849148659" duration="1457000" />
       <workItem from="1604851982251" duration="100000" />
-      <workItem from="1604852085616" duration="4384000" />
+      <workItem from="1604852085616" duration="5784000" />
+      <workItem from="1604922754630" duration="598000" />
+      <workItem from="1604938413008" duration="4000000" />
     </task>
     <servers />
   </component>
@@ -191,27 +200,40 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1355" height="230" key="GridCell.Tab.0.bottom" timestamp="1604852223880">
+    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604941533831">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1604941533831" />
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604941351055">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1604941351055" />
+    <state width="1355" height="230" key="GridCell.Tab.0.bottom" timestamp="1604865541894">
       <screen x="43" y="23" width="1397" height="877" />
     </state>
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1604849207187" />
-    <state width="1355" height="230" key="GridCell.Tab.0.bottom/43.23.1397.877@43.23.1397.877" timestamp="1604852223880" />
-    <state width="1355" height="230" key="GridCell.Tab.0.center" timestamp="1604852223877">
+    <state width="1355" height="230" key="GridCell.Tab.0.bottom/43.23.1397.877@43.23.1397.877" timestamp="1604865541894" />
+    <state width="1355" height="230" key="GridCell.Tab.0.center" timestamp="1604865541891">
       <screen x="43" y="23" width="1397" height="877" />
     </state>
     <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1604849207184" />
-    <state width="1355" height="230" key="GridCell.Tab.0.center/43.23.1397.877@43.23.1397.877" timestamp="1604852223877" />
-    <state width="1355" height="230" key="GridCell.Tab.0.left" timestamp="1604852223875">
+    <state width="1355" height="230" key="GridCell.Tab.0.center/43.23.1397.877@43.23.1397.877" timestamp="1604865541891" />
+    <state width="1355" height="230" key="GridCell.Tab.0.left" timestamp="1604865541890">
       <screen x="43" y="23" width="1397" height="877" />
     </state>
     <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1604849207182" />
-    <state width="1355" height="230" key="GridCell.Tab.0.left/43.23.1397.877@43.23.1397.877" timestamp="1604852223875" />
-    <state width="1355" height="230" key="GridCell.Tab.0.right" timestamp="1604852223878">
+    <state width="1355" height="230" key="GridCell.Tab.0.left/43.23.1397.877@43.23.1397.877" timestamp="1604865541890" />
+    <state width="1355" height="230" key="GridCell.Tab.0.right" timestamp="1604865541893">
       <screen x="43" y="23" width="1397" height="877" />
     </state>
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1604849207185" />
-    <state width="1355" height="230" key="GridCell.Tab.0.right/43.23.1397.877@43.23.1397.877" timestamp="1604852223878" />
+    <state width="1355" height="230" key="GridCell.Tab.0.right/43.23.1397.877@43.23.1397.877" timestamp="1604865541893" />
+    <state x="610" y="344" width="323" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604941597207">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="610" y="344" width="323" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1440.900@0.0.1440.900" timestamp="1604941597207" />
   </component>
 </project>
