@@ -20,23 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98761bee-e130-4e79-8ce9-a4ba9f2aa7cf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deans.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deans.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/packages.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/packages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/voku/portable-ascii/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/voku/portable-ascii/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/voku/portable-ascii/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/voku/portable-ascii/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/voku/portable-ascii/build/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/voku/portable-ascii/build/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/voku/portable-ascii/build/docs/base.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/voku/portable-ascii/build/docs/base.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/voku/portable-ascii/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/voku/portable-ascii/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/voku/portable-ascii/src/voku/helper/ASCII.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/voku/portable-ascii/src/voku/helper/ASCII.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/voku/portable-ascii/src/voku/helper/data/ascii_by_languages.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/voku/portable-ascii/src/voku/helper/data/ascii_by_languages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/voku/portable-ascii/src/voku/helper/data/x02e.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/voku/portable-ascii/src/voku/helper/data/x02e.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,6 +192,7 @@
       <workItem from="1604852085616" duration="5784000" />
       <workItem from="1604922754630" duration="598000" />
       <workItem from="1604938413008" duration="5063000" />
+      <workItem from="1604977584907" duration="520000" />
     </task>
     <servers />
   </component>
