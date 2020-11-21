@@ -16,6 +16,9 @@ class CertificationTypesController extends Controller
     public function index()
     {
         //
+        $certificationTypes = CertificationTypes::all();
+
+        return view('certificationTypes.index', compact('certificationTypes'));
     }
 
     /**
@@ -26,6 +29,7 @@ class CertificationTypesController extends Controller
     public function create()
     {
         //
+        return view('certificationTypes.create');
     }
 
     /**
@@ -37,6 +41,14 @@ class CertificationTypesController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'name' => 'required'
+        ]);
+
+        CertificationTypes::create($request->all());
+
+        return redirect()->route('certificationTypes.index')
+            ->with('success', 'Project created successfully.');
     }
 
     /**
@@ -48,6 +60,7 @@ class CertificationTypesController extends Controller
     public function show(CertificationTypes $certificationTypes)
     {
         //
+        return view('certificationTypes.show', compact('certificationTypes'));
     }
 
     /**
@@ -59,6 +72,7 @@ class CertificationTypesController extends Controller
     public function edit(CertificationTypes $certificationTypes)
     {
         //
+        return view('certificationTypes.edit', compact('certificationTypes'));
     }
 
     /**
@@ -71,6 +85,13 @@ class CertificationTypesController extends Controller
     public function update(Request $request, CertificationTypes $certificationTypes)
     {
         //
+        $request->validate([
+            'name' => 'required'
+        ]);
+        $certificationTypes->update($request->all());
+
+        return redirect()->route('certificationTypes.index')
+            ->with('success', 'Project updated successfully');
     }
 
     /**
@@ -82,5 +103,9 @@ class CertificationTypesController extends Controller
     public function destroy(CertificationTypes $certificationTypes)
     {
         //
+        $certificationTypes->delete();
+
+        return redirect()->route('certificationTypes.index')
+            ->with('success', 'Project deleted successfully');
     }
 }

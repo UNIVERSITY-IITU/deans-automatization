@@ -10,6 +10,7 @@ class Certifications extends Model
     use HasFactory;
     protected $table = 'certifications';
     public $timestamps = true;
+    public $primaryKey='certification_id';
     protected $fillable = [
         'university_logo',
         'university_organization',
