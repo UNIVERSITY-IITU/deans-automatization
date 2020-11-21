@@ -1,6 +1,6 @@
 @extends('layouts.appAdmin')
 @section('breadcumbText')
-Faqs
+Certification Type
 @endsection
 @section('card')
 @endsection
@@ -11,7 +11,7 @@ Faqs
             <h2>Edit Product</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('faqs.index') }}" title="Go back"> <i class="fas fa-backward "></i> </a>
+            <a class="btn btn-primary" href="{{ route('certificationTypes.index') }}" title="Go back"> <i class="fas fa-backward "></i> </a>
         </div>
     </div>
 </div>
@@ -27,24 +27,18 @@ Faqs
     </div>
 @endif
 
-<form action="{{ route('faqs.update', $faq->faq_id) }}" method="POST">
+<form action="{{ route('certificationTypes.update', $certificationTypes->certification_type_id) }}" method="POST">
     @csrf
     @method('PUT')
 
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Question:</strong>
-                <input type="text" name="question" value="{{ $faq->question }}" class="form-control" >
+                <strong>Name:</strong>
+                <input type="text" name="name" value="{{ $certificationTypes->name }}" class="form-control" >
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Answer:</strong>
-                <textarea class="form-control" style="height:50px" name="answer">{{ $faq->answer}}</textarea>
-            </div>
-        </div>
-    
+       
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>

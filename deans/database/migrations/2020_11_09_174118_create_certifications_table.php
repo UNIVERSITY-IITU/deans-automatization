@@ -22,7 +22,7 @@ class CreateCertificationsTable extends Migration
             $table->string('main_part');
             $table->string('license');
             $table->date('exp_date');
-            $table->foreignId('certification_type_id')->constrained('certification_types', 'certification_type_id')->onDelete('cascade');
+            $table->foreignId('certification_type_id')->constrained('certification_types', 'certification_types_id')->onDelete('cascade');
             $table->timestamps();
         });
     }
