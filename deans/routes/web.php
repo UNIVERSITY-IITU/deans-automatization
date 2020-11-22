@@ -57,10 +57,16 @@ Route::resource('certifications',CertificationsController::class);
 Route::resource('request_certifications',RequestCertificationsController::class);
 Route::get('/register', [RegistrationController::class,'create']);
 Route::post('register', [RegistrationController::class,'store']);
- 
+
 Route::get('/login', [SessionsController::class,'create']);
 Route::post('/login', [SessionsController::class,'store']);
 Route::get('/logout',[SessionsController::class,'destroy']);
+
+// REDIRECT IT TO USER PAGE
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
