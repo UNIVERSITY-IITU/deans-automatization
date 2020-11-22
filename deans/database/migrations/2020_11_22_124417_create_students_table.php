@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CertificationTypes extends Migration
+class CreateStudentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CertificationTypes extends Migration
      */
     public function up()
     {
-        Schema::table('certification_types', function (Blueprint $table) {
-            $table->id('certification_type_id')->autoIncrement();
-            $table->string('name');
+        Schema::create('students', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
         });
     }
@@ -27,8 +26,6 @@ class CertificationTypes extends Migration
      */
     public function down()
     {
-        Schema::table('certification_types', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('students');
     }
 }
