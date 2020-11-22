@@ -13,14 +13,15 @@ class CreateSuperUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('super_users', function (Blueprint $table) {
-            $table->id('super_user_id')->autoIncrement();
+        Schema::create('super__users', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('login');
             $table->string('password');
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->foreignId('deans_id')->constrained('deans_offices', 'deans_id')->onDelete('cascade');
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->integer('deans_office_id')->unsigned();
             $table->timestamps();
+            $table->foreign('deans_office_id')->references('id')->on('dean__offices')->onDelete('cascade');
         });
     }
 
@@ -31,6 +32,6 @@ class CreateSuperUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('super_users');
+        Schema::dropIfExists('super__users');
     }
 }

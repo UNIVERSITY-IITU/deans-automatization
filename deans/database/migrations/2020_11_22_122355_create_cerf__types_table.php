@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNationalitiesTable extends Migration
+class CreateCerfTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateNationalitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('nationalities', function (Blueprint $table) {
-            $table->id('nationality_id')->autoIncrement();
-            $table->string('name');
+        Schema::create('cerf__types', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ class CreateNationalitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nationalities');
+        Schema::dropIfExists('cerf__types');
     }
 }

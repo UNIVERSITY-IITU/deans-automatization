@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTypeStudiesTable extends Migration
+class CreateStreamsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateTypeStudiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('type_studies', function (Blueprint $table) {
-            $table->id('study_id')->autoIncrement();
+        Schema::create('streams', function (Blueprint $table) {
+            $table->increments('id');
+
             $table->string('name');
-            $table->integer('year');
+            $table->string('year');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateTypeStudiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('type_studies');
+        Schema::dropIfExists('streams');
     }
 }

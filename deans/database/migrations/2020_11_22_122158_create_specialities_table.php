@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStreamsTable extends Migration
+class CreateSpecialitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateStreamsTable extends Migration
      */
     public function up()
     {
-        Schema::create('streams', function (Blueprint $table) {
-            $table->id('stream_id')->autoIncrement();
-            $table->string('name');
-            $table->integer('year');
+        Schema::create('specialities', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ class CreateStreamsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('streams');
+        Schema::dropIfExists('specialities');
     }
 }
