@@ -61,3 +61,6 @@ Route::post('register', [RegistrationController::class,'store']);
 Route::get('/login', [SessionsController::class,'create']);
 Route::post('/login', [SessionsController::class,'store']);
 Route::get('/logout',[SessionsController::class,'destroy']);
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
