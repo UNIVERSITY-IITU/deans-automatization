@@ -14,8 +14,21 @@ class CreateStudentsTable extends Migration
     public function up()
     {
         Schema::create('students', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('address');
+            $table->date('birthdate');
+            $table->integer('id_nation')->unsigned();
+            $table->integer('id_stream')->unsigned();
+            $table->integer('id_spec')->unsigned();
+            $table->integer('id_type_study')->unsigned();
             $table->timestamps();
+            $table->foreign('id_nation')->references('id')->on('nationalities')->onDelete('cascade');
+            $table->foreign('id_stream')->references('id')->on('streams')->onDelete('cascade');
+            $table->foreign('id_type_study')->references('id')->on('type__studies')->onDelete('cascade');
+            $table->foreign('id_spec')->references('id')->on('specialities')->onDelete('cascade');
+
         });
     }
 

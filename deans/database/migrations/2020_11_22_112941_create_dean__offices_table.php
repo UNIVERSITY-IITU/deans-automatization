@@ -14,7 +14,13 @@ class CreateDeanOfficesTable extends Migration
     public function up()
     {
         Schema::create('dean__offices', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('dean_name');
+            $table->string('stamp');
+            $table->string('signature');
+            $table->string('phone_number');
+            $table->string('address');
+            $table->string('code');
             $table->timestamps();
         });
     }

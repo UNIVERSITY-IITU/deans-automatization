@@ -14,7 +14,9 @@ class CreateTypeStudiesTable extends Migration
     public function up()
     {
         Schema::create('type__studies', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('name');
+            $table->integer('year');
             $table->timestamps();
         });
     }

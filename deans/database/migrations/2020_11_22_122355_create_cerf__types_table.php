@@ -14,7 +14,9 @@ class CreateCerfTypesTable extends Migration
     public function up()
     {
         Schema::create('cerf__types', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('name');
+            $table->integer('period_date');
             $table->timestamps();
         });
     }
