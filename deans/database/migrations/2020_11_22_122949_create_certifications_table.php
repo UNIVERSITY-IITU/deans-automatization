@@ -14,15 +14,7 @@ class CreateCertificationsTable extends Migration
     public function up()
     {
         Schema::create('certifications', function (Blueprint $table) {
-            $table->id('certification_id')->autoIncrement();
-            $table->string('university_logo');
-            $table->string('university_organization');
-            $table->string('title');
-            $table->string('paragraph');
-            $table->string('main_part');
-            $table->string('license');
-            $table->date('exp_date');
-            $table->foreignId('certification_type_id')->constrained('certification_types', 'certification_type_id')->onDelete('cascade');
+            $table->id();
             $table->timestamps();
         });
     }

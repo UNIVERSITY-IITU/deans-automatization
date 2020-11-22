@@ -14,9 +14,7 @@ class CreateFaqsTable extends Migration
     public function up()
     {
         Schema::create('faqs', function (Blueprint $table) {
-            $table->id('faq_id')->autoIncrement();
-            $table->string('question');
-            $table->string('answer');
+            $table->id();
             $table->timestamps();
         });
     }

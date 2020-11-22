@@ -7,7 +7,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>{{config('app.name', 'Deans')}}</title>
-        <link href="css/app.css" rel="stylesheet" />
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -20,7 +20,9 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-
+                            @if( auth()->check() )
+                                
+            
                             <div class="sb-sidenav-menu-heading">Core</div>
                             <a class="nav-link" href="/indexAdmin">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
@@ -37,10 +39,11 @@
                                 Обяснительные
                             </a>
 
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{ route('faqs.index') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Вопросы
                             </a>
+                            @endif
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
@@ -49,9 +52,10 @@
                     </div>
                 </nav>
             </div>
-
+            
             <div id="layoutSidenav_content">
                 <main>
+                
                     <div class="container-fluid">
                         <h1 class="mt-4">@yield('breadcumbText')</h1>
                         <ol class="breadcrumb mb-4">
@@ -65,6 +69,7 @@
                         @yield('cardBody')
                     
                     </div>
+               
                 </main>
                @include('inc.footer')
             </div>

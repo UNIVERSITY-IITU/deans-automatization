@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCertificationTypesTable extends Migration
+class CreateStreamsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateCertificationTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('certification_types', function (Blueprint $table) {
-            $table->id('certification_type_id')->autoIncrement();
+        Schema::create('streams', function (Blueprint $table) {
+            $table->increments('id');
+
             $table->string('name');
-            $table->date('period_date');
+            $table->string('year');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateCertificationTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('certification_types');
+        Schema::dropIfExists('streams');
     }
 }

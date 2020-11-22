@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTypeStudiesTable extends Migration
+class CreateCerfTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateTypeStudiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('type_studies', function (Blueprint $table) {
-            $table->id('study_id')->autoIncrement();
-            $table->string('name');
-            $table->integer('year');
+        Schema::create('cerf__types', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ class CreateTypeStudiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('type_studies');
+        Schema::dropIfExists('cerf__types');
     }
 }

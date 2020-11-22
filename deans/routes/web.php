@@ -15,6 +15,8 @@ use App\Http\Controllers\SpecialitiesController;
 use App\Http\Controllers\StudentsController;
 use App\Http\Controllers\CertificationsController;
 use App\Http\Controllers\RequestCertificationsController;
+use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\SessionsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,9 +49,15 @@ Route::resource('type_studies',TypeStudiesController::class);
 Route::resource('streams',StreamsController::class);
 Route::resource('nationalities',NationalitiesController::class);
 Route::resource('faqs',FaqsController::class);
-Route::resource('certification_types',CertificationTypesController::class);
+Route::resource('certificationTypes',CertificationTypesController::class);
 Route::resource('super_users',SuperUsersController::class);
 Route::resource('specialities',SpecialitiesController::class);
 Route::resource('students',StudentsController::class);
 Route::resource('certifications',CertificationsController::class);
 Route::resource('request_certifications',RequestCertificationsController::class);
+Route::get('/register', [RegistrationController::class,'create']);
+Route::post('register', [RegistrationController::class,'store']);
+ 
+Route::get('/login', [SessionsController::class,'create']);
+Route::post('/login', [SessionsController::class,'store']);
+Route::get('/logout',[SessionsController::class,'destroy']);
