@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Certifications;
-use App\Http\Controllers\Controller;
+use App\Models\Faq;
 use Illuminate\Http\Request;
 
-class CertificationsController extends Controller
+class FaqController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,6 +15,9 @@ class CertificationsController extends Controller
     public function index()
     {
         //
+        $faqs = Faq::all();
+
+        return view('faqs.index', compact('faqs'));
     }
 
     /**
@@ -26,6 +28,7 @@ class CertificationsController extends Controller
     public function create()
     {
         //
+        return view('faqs.create');
     }
 
     /**
@@ -37,50 +40,72 @@ class CertificationsController extends Controller
     public function store(Request $request)
     {
         //
+        $faq=new Faq();
+        $faq->question = $request->question;
+        
+        $faq->answer = $request->answer;
+        $faq->save();
+        return redirect()->route('faq.index')
+            ->with('success', 'Faq created successfully.');
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Certifications  $certifications
+     * @param  \App\Models\Faq  $faq
      * @return \Illuminate\Http\Response
      */
-    public function show(Certifications $certifications)
+    public function show(Faq $faq)
     {
         //
+        return view('faqs.show', compact('faq'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Certifications  $certifications
+     * @param  \App\Models\Faq  $faq
      * @return \Illuminate\Http\Response
      */
-    public function edit(Certifications $certifications)
+    public function edit(Faq $faq)
     {
         //
+        return view('faqs.edit', compact('faq'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Certifications  $certifications
+     * @param  \App\Models\Faq  $faq
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Certifications $certifications)
+    public function update(Request $request, Faq $faq)
     {
         //
+        $request->validate([
+            'question' => 'required',
+            'answer' => 'required'
+        ]);
+        $faq->update($request->all());
+
+        return redirect()->route('faq.index')
+            ->with('success', 'Faq updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Certifications  $certifications
+     * @param  \App\Models\Faq  $faq
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Certifications $certifications)
+    public function destroy(Faq $faq)
     {
         //
+        $faq->delete();
+
+        return redirect()->route('faq.index')
+            ->with('success', 'Faq deleted successfully');
     }
 }
