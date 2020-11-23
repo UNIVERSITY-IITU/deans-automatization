@@ -1,0 +1,5 @@
+
+deans/.env
+*.sqlite
+deans/database.sqlite
+deans/config/database.php
