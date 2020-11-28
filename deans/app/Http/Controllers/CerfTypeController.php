@@ -84,10 +84,11 @@ class CerfTypeController extends Controller
      * @param  \App\Models\Cerf_Type  $cerf_Type
      * @return \Illuminate\Http\Response
      */
-    public function update()
+    public function update(Request $request)
     {
         //
-        $cerf = Cerf_Type::find(request('id'));
+        $id=$request->id;
+        $cerf = Cerf_Type::find($id);
         $cerf->name=request('name');
         $cerf->period_date=request('period_date');
         $cerf->save();

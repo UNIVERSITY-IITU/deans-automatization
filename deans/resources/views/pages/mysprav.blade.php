@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appAdmin')
 @section('breadcrumbText')
 Мои справки
 @endsection
@@ -52,7 +52,8 @@
         </thead>
         <tfoot>
             <tr>
-                <th>Номер Справки</th>
+                
+                <th>Название Справки</th>
                 <th>Название Справки</th>
                 <th>ФИО Студента</th>
                 <th>Статус</th>
@@ -60,13 +61,39 @@
             </tr>
         </tfoot>
         <tbody>
+            @foreach ($reqcer as $r)
+                
+           
             <tr>
-                <td>1</td>
-                <td>С места учебы</td>
-                <td>Скандер Ботакоз</td>
-                <td>Завершен</td>
-                <td><button type="button" class="btn btn-link">Загрузить</button></td>
+                
+                @foreach ($cerf as $c)
+                    @if ($c->id==$r->cert_id)
+                    <td>{{$c->title}}</td>
+                    @foreach ($cerftype as $cf)
+                        @if ($cf->id==$c->type_cerf_id)
+                            <td>{{$cf->name}}</td>
+                        @endif
+                    @endforeach
+                    @endif
+                @endforeach
+                
+                <td>{{$student->firstname }}  {{$student->lastname }}</td>
+                <td>
+                     @if ($r->is_approved==false)
+                         {{ 'in process' }}
+                    @else
+                    {{ 'completed' }}
+                     @endif   
+                </td>
+                <td>
+                    @if ($r->is_approved==false)
+                   
+                    @else
+                    <button type="button" class="btn btn-link">Загрузить</button>
+                    @endif   
+                </td>
             </tr>
+            @endforeach
             
         </tbody>
     </table>

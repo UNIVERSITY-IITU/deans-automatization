@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Certification;
+use App\Models\Cerf_Type;
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -13,9 +15,9 @@ class PagesController extends Controller
     public function faq(){
         return view('pages/faq');
     }
-    public function formsprav(){
-        return view('pages/formsprav');
-    }
+    // public function formsprav(){
+    //     return view('pages/formsprav');
+    // }
     public function formzaev(){
         return view('pages/formzaev');
     }
@@ -31,7 +33,11 @@ class PagesController extends Controller
         return view('pages/myzaev');
     }
     public function sendspravka(){
-        return view('pages/sendspravka');
+        $cerf=Certification::all();
+        $student=Student::where('id',1)->get();
+        $cerf_Type=Cerf_Type::all();
+
+        return view('pages.sendspravka',['cerf'=>$cerf,'cerftype'=>$cerf_Type]);
     }
     public function sendzaev(){
         return view('pages/sendzaev');

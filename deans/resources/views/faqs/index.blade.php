@@ -23,7 +23,7 @@ Faqs
     <tbody>
         @foreach ($faqs as $faq)
             <tr>
-            <td>{{ $faq->faq_id}}</td>
+            <td>{{ $faq->id}}</td>
                 <td>{{ $faq->question}}</td>
                 <td>{{ $faq->answer }}</td>
                 

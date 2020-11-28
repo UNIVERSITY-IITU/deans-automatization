@@ -28,50 +28,77 @@
     </tr>
     </thead>
     <tbody>
-    
+        @foreach($requestCert as $r)
         <tr>
-            <th scope="row">1</th>
-            <td>Паленшиев Тугенше</td>
-            <td>CSSE-1806K</td>
-            <td>3</td>
-            <td>Приложение 7</td>
-            <td>
-                <div class="btn-group">
-                    <a class="btn btn-success" data-toggle="modal" data-target="#"><i class="fa fa-check"></i></a>
-                    <a class="btn btn-danger" data-toggle="modal" data-target="#"><i class="fa fa-times"></i></a>
-                </div>
+            @if ($r->is_approved==false)
+                <th scope="row">{{$r->id}}</th>
+                <td>
+                    @foreach ($students as $s)
+                    @if ($r->student_id==$s->id)
+                        {{$s->lastname}}  {{$s->firstname}}
+                    @endif
+                    @endforeach
+                    
+                </td>
+                <td>
+                    @foreach ($students as $s)
+                    @if ($r->student_id==$s->id)
+                        @foreach ($stream as $st)
+                            @if ($st->id=$s->id_stream)
+                                {{$st->name}}
+                            @endif
+                        @endforeach
+                        
+                    @endif
+                    @endforeach
+                </td>
+                <td>@foreach ($students as $s)
+                    @if ($r->student_id==$s->id)
+                        @foreach ($stream as $st)
+                            @if ($st->id=$s->id_stream)
+                                {{$st->year}}
+                            @endif
+                        @endforeach
+                        
+                    @endif
+                    @endforeach
+                </td>
+                <td>
+                    @foreach ($cerf as $c)
+                        @if ($c->id==$r->cert_id)
+                            @foreach ($cerf_Type as $ct)
+                                @if ($ct->id==$c->type_cerf_id)
+                                    {{$ct->name}}
+                                @endif
+                            @endforeach
+                        @endif
+                    @endforeach
+                
             </td>
+                <td>
+                    <div class="btn-group">
+                        <form action="/requestCert/{{$r->id}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+        
+                            <button type="submit"  class="btn btn-danger">
+                                <i class="fas fa-trash"></i>
+        
+                            </button>
+                        </form>
+                        <form action="/requestCert/update" method="POST">
+                            @csrf
+                            <input type="hidden" name="id" value="{{$r->id}}">
+                            <button type="submit" class="btn btn-success">
+                                <i class="fa fa-check"></i>
+                            </button>
+                        </form>
+                    
+                    </div>
+                </td>
+            @endif
         </tr>
-
-        <tr>
-            <th scope="row">2</th>
-            <td>Ақжол Бақатай</td>
-            <td>CSSE-1802K</td>
-            <td>3</td>
-            <td>С место требование</td>
-            <td>
-                <div class="btn-group">
-                    <a class="btn btn-success" data-toggle="modal" data-target="#"><i class="fa fa-check"></i></a>
-                    <a class="btn btn-danger" data-toggle="modal" data-target="#"><i class="fa fa-times"></i></a>
-                </div>
-            </td>
-        </tr>
-
-        <tr>
-            <th scope="row">2</th>
-            <td>Ақжол Бақатай</td>
-            <td>CSSE-1802K</td>
-            <td>3</td>
-            <td>Военкомат</td>
-            <td>
-                <div class="btn-group">
-                    <a class="btn btn-success" data-toggle="modal" data-target="#"><i class="fa fa-check"></i></a>
-                    <a class="btn btn-danger" data-toggle="modal" data-target="#"><i class="fa fa-times"></i></a>
-                </div>
-            </td>
-        </tr>
-
-
+        @endforeach
     </tbody>
 </table>
 @endsection
