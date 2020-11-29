@@ -8,14 +8,14 @@ use App\Http\Controllers\AddressesController;
 use App\Http\Controllers\TypeStudiesController;
 use App\Http\Controllers\StreamsController;
 use App\Http\Controllers\NationalitiesController;
-use App\Http\Controllers\FaqsController;
-use App\Http\Controllers\CertificationTypesController;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\CerfTypeController;
 use App\Http\Controllers\SuperUsersController;
 use App\Http\Controllers\SpecialitiesController;
 use App\Http\Controllers\StudentsController;
 use App\Http\Controllers\CertificationsController;
 use App\Http\Controllers\RequestCertificationsController;
-use App\Http\Controllers\RegistrationController;
+
 use App\Http\Controllers\SessionsController;
 /*
 |--------------------------------------------------------------------------
@@ -43,30 +43,17 @@ Route::get('/indexAdmin',[AdminController::class,'index']);
 Route::get('/add',[AdminController::class,'addPages']);
 Route::get('/detail',[AdminController::class,'detail']);
 Route::get('/request',[AdminController::class,'request']);
-Route::resource('dean_offices',DeandOfficeController::class);
-Route::resource('addresses',AddressesController::class);
-Route::resource('type_studies',TypeStudiesController::class);
-Route::resource('streams',StreamsController::class);
-Route::resource('nationalities',NationalitiesController::class);
-Route::resource('faqs',FaqsController::class);
-Route::resource('certificationTypes',CertificationTypesController::class);
-Route::resource('super_users',SuperUsersController::class);
-Route::resource('specialities',SpecialitiesController::class);
-Route::resource('students',StudentsController::class);
-Route::resource('certifications',CertificationsController::class);
-Route::resource('request_certifications',RequestCertificationsController::class);
-Route::get('/register', [RegistrationController::class,'create']);
-Route::post('register', [RegistrationController::class,'store']);
-
+Route::resource('faq',FaqController::class);
+Route::get('/cerfType', [CerfTypeController::class, 'index'] );
+Route::get('/cerfType/create', [CerfTypeController::class, 'create'] );
+Route::post('/cerfType', [CerfTypeController::class, 'store'] );
+Route::get('/cerfTypes/{id}', [CerfTypeController::class, 'show'] );
+Route::get('/cerfType/{id}', [CerfTypeController::class, 'edit'] );
+Route::post('/cerfType/update', [CerfTypeController::class, 'update'] );
+Route::delete('/cerfTyped/{id}', [CerfTypeController::class, 'destroy'] );
 Route::get('/login', [SessionsController::class,'create']);
 Route::post('/login', [SessionsController::class,'store']);
 Route::get('/logout',[SessionsController::class,'destroy']);
-
-// REDIRECT IT TO USER PAGE
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

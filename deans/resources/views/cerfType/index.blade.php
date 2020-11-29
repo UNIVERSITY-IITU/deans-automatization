@@ -1,6 +1,6 @@
 @extends('layouts.appAdmin')
 @section('breadcumbText')
-Faqs
+Certification Type
 @endsection
 @section('card')
 @if ($message = Session::get('success'))
@@ -15,30 +15,28 @@ Faqs
     <thead>
     <tr>
         <th scope="col">ID</th>
-        <th scope="col">Название</th>
-        
-        <th scope="col">Действии</th>
+        <th scope="col">Name</th>
+        <th scope="col">Period date</th>
+        <th scope="col">Action</th>
     </tr>
     </thead>
     <tbody>
-        @foreach ($certificationTypes as $c)
+        @foreach ($cerf_Types as $cerf_Type)
             <tr>
-            <td>{{ $c->certification_type_id}}</td>
-                <td>{{ $c->name}}</td>
-
-
+            <td>{{ $cerf_Type->id}}</td>
+                <td>{{ $cerf_Type->name}}</td>
+                <td>{{ $cerf_Type->period_date }}</td>
+                
                 <td>
-                    <form action="{{ route('certificationTypes.destroy', $c->certification_type_id) }}" method="POST">
+                    <a href="/cerfTypes/{{$cerf_Type->id}}" title="show">
+                        <i class="fas fa-eye text-success  fa-lg"></i>
+                    </a>
 
-                        <a href="{{ route('certificationTypes.show', $c->certification_type_id) }}" title="show">
-                            <i class="fas fa-eye text-success  fa-lg"></i>
-                        </a>
+                    <a href="/cerfType/{{$cerf_Type->id}}">
+                        <i class="fas fa-edit  fa-lg"></i>
 
-                        <a href="{{ route('certificationTypes.edit',$c->certification_type_id) }}">
-                            <i class="fas fa-edit  fa-lg"></i>
-
-                        </a>
-
+                    </a>
+                    <form action="/cerfTyped/{{$cerf_Type->id}}" method="POST">
                         @csrf
                         @method('DELETE')
 
@@ -58,7 +56,7 @@ Faqs
 @section('addButton')
 <div class="container-fluid">    
     <div class="float-right">
-        <a class="btn btn-success" href="{{ route('certificationTypes.create') }}" title="add new faq"> <i class="fas fa-plus-circle"></i>
+        <a class="btn btn-success" href="/cerfType/create" title="add new faq"> <i class="fas fa-plus-circle"></i>
         </a>
     </div>
 </div>

@@ -16,15 +16,14 @@
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                @if( auth()->check() )
-                    <a class="dropdown-item" href="#">Hi {{ auth()->user()->name }}</a>
+               
+                    <a class="dropdown-item" href="#">Hi</a>
                     <a class="dropdown-item" href="/logout">Log Out</a>
                 
-            @else
+   
                <a class="dropdown-item" href="/login">Log In</a>
                 <a class="dropdown-item" href="/register">Register</a>
-               
-            @endif
+       
             </div>
         </li>
     </ul>

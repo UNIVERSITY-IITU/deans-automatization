@@ -7,11 +7,15 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>{{config('app.name', 'Deans')}}</title>
+        
         <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">  
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
         @include('inc.adminNav')
@@ -20,7 +24,7 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            @if( auth()->check() )
+                      
                                 
             
                             <div class="sb-sidenav-menu-heading">Core</div>
@@ -39,11 +43,11 @@
                                 Обяснительные
                             </a>
 
-                            <a class="nav-link" href="{{ route('faqs.index') }}">
+                            <a class="nav-link" href="{{ route('faq.index') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Вопросы
                             </a>
-                            @endif
+                         
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
