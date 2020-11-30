@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appAdmin')
 @section('breadcumbText')
 Заполнение вид  заявление
 @endsection

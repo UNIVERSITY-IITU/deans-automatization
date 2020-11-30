@@ -28,19 +28,19 @@
                                 
             
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="/indexAdmin">
+                            <a class="nav-link" href="{{ route('faq.index') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Справки
                             </a>
 
-                            <a class="nav-link" href="/detail">
+                            <a class="nav-link" href="/cerfType">
                                 <div class="sb-nav-link-icon"><i class="far fa-pencil-alt"></i></div>
-                                Заявления
+                                 Certification Type
                             </a>
 
-                            <a class="nav-link" href="/detail">
+                            <a class="nav-link" href="/cerf">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Обяснительные
+                                Certification
                             </a>
 
                             <a class="nav-link" href="{{ route('faq.index') }}">
@@ -51,8 +51,8 @@
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                        <div class="small">Deans</div>
+                        
                     </div>
                 </nav>
             </div>

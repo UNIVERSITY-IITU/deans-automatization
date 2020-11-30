@@ -16,9 +16,7 @@ class Certification extends Model
         'title',
         'paragraph',
         'main_part',
-        'license'
+        'license',
+        'type_cerf_id'
     ];
-    public function cerf_type(){
-        return $this->belongsTo('App\Model\Cerf_Type');
-    }
 }

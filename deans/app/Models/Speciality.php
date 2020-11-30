@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Speciality extends Model
 {
     use HasFactory;
+    protected $table = 'specialities';
+    public $timestamps = true;
+    protected $fillable = [
+        'name',
+        'code',
+        'deans_office_id'
+    ];
 }
