@@ -21,8 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7120a906-098d-44aa-8fb8-bfc8e7425a73" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deans/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/deans/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deans/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/deans/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deans/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/deans/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deans/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/deans/app/Providers/RouteServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deans/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/deans/database.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deans/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/deans/routes/web.php" afterDir="false" />
     </list>
@@ -67,6 +67,7 @@
       <updated>1606065345650</updated>
       <workItem from="1606065347582" duration="6564000" />
       <workItem from="1606080840043" duration="1157000" />
+      <workItem from="1606719232859" duration="313000" />
     </task>
     <servers />
   </component>

@@ -66,6 +66,10 @@ Route::get('/logout',[SessionsController::class,'destroy']);
 //    return view('dashboard');
 //})->name('dashboard');
 
+Route::middleware('auth:sanctum')->get('/index', function (Request $request) {
+    return $request->user();
+});
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/',[PagesController::class,'index']);
 
 Auth::routes();
