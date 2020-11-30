@@ -4,7 +4,7 @@
  * This script stress tests calculators with random large numbers and ensures that all implementations return the same
  * results. It is designed to run in an infinite loop unless a bug is found.
  */
-
+// 
 declare(strict_types=1);
 
 require __DIR__ . '/vendor/autoload.php';

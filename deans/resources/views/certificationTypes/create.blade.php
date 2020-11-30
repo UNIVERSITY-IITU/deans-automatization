@@ -27,7 +27,11 @@ Certification Type
             </ul>
         </div>
     @endif
+<<<<<<< Updated upstream:deans/resources/views/certificationTypes/create.blade.php
     <form action="{{ route('certificationTypes.store') }}" method="POST" >
+=======
+    <form action="/cerfType" method="POST" >
+>>>>>>> Stashed changes:deans/resources/views/cerfType/create.blade.php
         @csrf
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
