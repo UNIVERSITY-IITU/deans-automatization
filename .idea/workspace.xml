@@ -20,33 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7120a906-098d-44aa-8fb8-bfc8e7425a73" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/deans/app/Http/Controllers/Auth/ConfirmPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deans/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deans/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deans/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deans/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deans/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deans/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deans/database.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deans/resources/sass/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deans/resources/sass/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deans/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deans/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deans/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deans/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deans/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deans/.env" beforeDir="false" afterPath="$PROJECT_DIR$/deans/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deans/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/deans/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deans/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/deans/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deans/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/deans/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deans/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/deans/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deans/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/deans/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deans/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/deans/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deans/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/deans/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deans/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/deans/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deans/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/deans/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deans/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/deans/database.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deans/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/deans/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deans/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/deans/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deans/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/deans/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

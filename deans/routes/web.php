@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\AdminController;
@@ -29,12 +30,16 @@ use App\Http\Controllers\SessionsController;
 */
 
 Route::get('/',[PagesController::class,'index']);
+
 Route::get('/faqs',[PagesController::class,'faq']);
+
 Route::get('/formspravki',[PagesController::class,'formsprav']);
+
 Route::get('/formzaev',[PagesController::class,'formzaev']);
 
-Route::get('/login',[PagesController::class,'login']);
+//Route::get('/login',[PagesController::class,'login']);
 Route::get('/myspravki',[PagesController::class,'mysprav']);
+
 Route::get('/myzaev',[PagesController::class,'myzaev']);
 
 Route::get('/sendspravka',[PagesController::class,'sendspravka']);
@@ -51,9 +56,18 @@ Route::get('/cerfTypes/{id}', [CerfTypeController::class, 'show'] );
 Route::get('/cerfType/{id}', [CerfTypeController::class, 'edit'] );
 Route::post('/cerfType/update', [CerfTypeController::class, 'update'] );
 Route::delete('/cerfTyped/{id}', [CerfTypeController::class, 'destroy'] );
+
 Route::get('/login', [SessionsController::class,'create']);
 Route::post('/login', [SessionsController::class,'store']);
 Route::get('/logout',[SessionsController::class,'destroy']);
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+
+// REDIRECT IT TO USER PAGE
+//Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//    return view('dashboard');
+//})->name('dashboard');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/',[PagesController::class,'index']);
+
+Auth::routes();
+
+Route::get('/home', [PagesController::class, 'index']);
