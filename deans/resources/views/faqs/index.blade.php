@@ -23,18 +23,18 @@ Faqs
     <tbody>
         @foreach ($faqs as $faq)
             <tr>
-            <td>{{ $faq->faq_id}}</td>
+            <td>{{ $faq->id}}</td>
                 <td>{{ $faq->question}}</td>
                 <td>{{ $faq->answer }}</td>
                 
                 <td>
-                    <form action="{{ route('faqs.destroy', $faq->faq_id) }}" method="POST">
+                    <form action="{{ route('faq.destroy', $faq) }}" method="POST">
 
-                        <a href="{{ route('faqs.show', $faq->faq_id) }}" title="show">
+                        <a href="{{ route('faq.show', $faq) }}" title="show">
                             <i class="fas fa-eye text-success  fa-lg"></i>
                         </a>
 
-                        <a href="{{ route('faqs.edit', $faq->faq_id) }}">
+                        <a href="{{ route('faq.edit', $faq) }}">
                             <i class="fas fa-edit  fa-lg"></i>
 
                         </a>
@@ -58,7 +58,7 @@ Faqs
 @section('addButton')
 <div class="container-fluid">    
     <div class="float-right">
-        <a class="btn btn-success" href="{{ route('faqs.create') }}" title="add new faq"> <i class="fas fa-plus-circle"></i>
+        <a class="btn btn-success" href="{{ route('faq.create') }}" title="add new faq"> <i class="fas fa-plus-circle"></i>
         </a>
     </div>
 </div>

@@ -9,10 +9,10 @@ Certification Type
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Add New Certification Type</h2>
+                <h2>Add New Certification type</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('certificationTypes.index') }}" title="Go back"> <i class="fas fa-backward "></i> </a>
+                <a class="btn btn-primary" href="/cerfType" title="Go back"> <i class="fas fa-backward "></i> </a>
             </div>
         </div>
     </div>
@@ -27,22 +27,20 @@ Certification Type
             </ul>
         </div>
     @endif
-<<<<<<< Updated upstream:deans/resources/views/certificationTypes/create.blade.php
-    <form action="{{ route('certificationTypes.store') }}" method="POST" >
-=======
     <form action="/cerfType" method="POST" >
->>>>>>> Stashed changes:deans/resources/views/cerfType/create.blade.php
         @csrf
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Name:</strong>
-                    <input type="text" name="name" class="form-control" placeholder="Name">
+                    <input type="text" name="name" class="form-control" placeholder="name">
+                </div>
+                <div class="form-group">
+                    <strong>Name:</strong>
+                    <input type="number"  min='0' name="period_date" class="form-control" placeholder="period date">
                 </div>
             </div>
-        
-    
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+           <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>

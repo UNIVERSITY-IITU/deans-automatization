@@ -11,7 +11,7 @@ Faqs
             <h2>Edit Product</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('faqs.index') }}" title="Go back"> <i class="fas fa-backward "></i> </a>
+            <a class="btn btn-primary" href="{{ route('faq.index') }}" title="Go back"> <i class="fas fa-backward "></i> </a>
         </div>
     </div>
 </div>
@@ -27,7 +27,7 @@ Faqs
     </div>
 @endif
 
-<form action="{{ route('faqs.update', $faq->faq_id) }}" method="POST">
+<form action="{{ route('faq.update', $faq) }}" method="POST">
     @csrf
     @method('PUT')
 

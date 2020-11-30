@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appAdmin')
 @section('breadcumbText')
 Подача Справки
 @endsection
@@ -13,33 +13,43 @@
     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
             <tr>
-                <th></th>
+              
                 <th>Название Справки</th>
                 <th>Вид справки</th>
-                <th>Цена</th>
+                <th>Action</th>
                 
                
             </tr>
         </thead>
         <tfoot>
             <tr>
-                <th></th>
+                
                 <th>Название Справки</th>
                 <th>Вид справки</th>
-                <th>Цена</th>
+                <th>Action</th>
                 
             </tr>
         </tfoot>
         <tbody>
-            <tr>
-                <td><input type="radio" id="age1" name="age" value="30"> </td>
-                <td>с места учебы</td>
-                <td>положение 6</td>
-                <td>Бесплатно</td>
-            </tr>
-            
+            @foreach ($cerf as $ct)
+           
+                <tr>
+                   
+                    
+                    <td>{{$ct->title}}</td>
+                    @foreach ($cerftype as $c)
+                        @if ($c->id==$ct->type_cerf_id)
+                        <td>{{$c->name}}</td>
+                        @endif
+                    @endforeach
+                    
+                    <td> <a class="btn btn-success" href="/requestCert/create/{{$ct->id}}"> Отправить</a></td>
+                   
+                </tr>
+           
+            @endforeach
         </tbody>
     </table>
-    <button type="button" class="btn btn-outline-dark" ><a href="/formspravki"> Отправить заявку</a></button>
+    {{-- <button type="button" class="btn btn-outline-dark" ><a href="/requestCert/create/{{$cerf->id}}"> Отправить заявку</a></button> --}}
 </div>
 @endsection

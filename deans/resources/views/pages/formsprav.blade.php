@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appAdmin')
 @section('breadcumbText')
 Заполнение вид  справки
 @endsection
@@ -13,31 +13,26 @@
     <div class="container-fluid">
      <div class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <form method="post">
+                    <form method="post" action="/requestCert">
+                        @csrf
                     <div class="form-group ">
                     <label class="control-label " for="second_name">
                     Фамилия
                     </label>
-                    <input class="form-control" id="second_name" name="second_name" type="text" readonly/>
+                    <input class="form-control" id="second_name"  value="{{$student->lastname}}" name="lastname" type="text" readonly/>
                     </div>
                     <div class="form-group ">
                     <label class="control-label " for="name1">
                     Имя
                     </label>
-                    <input class="form-control" id="name1" name="name1" type="text" readonly/>
-                    </div>
-                    <div class="form-group ">
-                    <label class="control-label " for="father_name">
-                    Отчество
-                    </label>
-                    <input class="form-control" id="father_name" name="father_name" type="text" readonly/>
+                    <input class="form-control" id="name1"  value="{{$student->firstname}}" name="firstname" type="text" readonly/>
                     </div>
                     <div class="form-group ">
                     <label class="control-label " for="date">
                     Дата рождения
                     </label>
                     <div class="input-group">
-                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" readonly/>
+                    <input class="form-control" id="date" name="date" value="{{$student->birthdate}}" placeholder="MM/DD/YYYY" type="text" readonly/>
                     <div class="input-group-addon">
                         <i class="fa fa-calendar">
                         </i>
@@ -45,102 +40,52 @@
                     </div>
                     </div>
                     <div class="form-group ">
-                    <label class="control-label " for="iin">
-                    ИИН
-                    </label>
-                    <input class="form-control" id="iin" name="iin" type="text" readonly/>
-                    </div>
-                    <div class="form-group ">
                     <label class="control-label " for="citizenship">
                     Гражданство
                     </label>
-                    <input class="form-control" id="citizenship" name="citizenship" type="text" readonly/>
-                    </div>
-                    <div class="form-group ">
-                    <label class="control-label " for="document">
-                    Документ, удостоверяющий личность
-                    </label>
-                    <input class="form-control" id="document" name="document" type="text" readonly/>
-                    </div>
-                    <div class="form-group ">
-                    <label class="control-label " for="number_document">
-                    Номер документа, удостоверяющего личность
-                    </label>
-                    <input class="form-control" id="number_document" name="number_document" type="text" readonly/>
-                    </div>
-                    <div class="form-group ">
-                    <label class="control-label " for="date1">
-                    Дата выдачи документа, удостоверяющего личность
-                    </label>
-                    <input class="form-control" id="date1" name="date1" placeholder="MM/DD/YYYY" type="text" readonly/>
-                    </div>
-                    <div class="form-group ">
-                    <label class="control-label " for="organ_document">
-                    Орган выдачи документа, удостоверяющего личность
-                    </label>
-                    <input class="form-control" id="organ_document" name="organ_document" type="text" readonly/>
-                    </div>
-                    <div class="form-group ">
-                    <label class="control-label " for="facultet">
-                    Факультет
-                    </label>
-                    <input class="form-control" id="facultet" name="facultet" type="text" readonly/>
+                    @foreach ($nationality as $n)
+                        @if ($n->id==$student->id_nation)
+                        <input class="form-control" value="{{$n->name}}" id="citizenship" name="citizenship" type="text" readonly/>
+                        @endif
+                    @endforeach
+                    
                     </div>
                     <div class="form-group ">
                     <label class="control-label " for="kafedra">
-                    Кафедра
+                        Специальность/Группа образовательных программ
                     </label>
-                    <input class="form-control" id="kafedra" name="kafedra" type="text" readonly/>
-                    </div>
-                    <div class="form-group ">
-                    <label class="control-label " for="speciality">
-                    Специальность/Группа образовательных программ
-                    </label>
-                    <input class="form-control" id="speciality" name="speciality" type="text" readonly/>
+                    @foreach ($speciality as $s)
+                        @if ($s->id==$student->id_spec)
+                        <input class="form-control" value="{{$s->name}}" id="kafedra" name="kafedra" type="text" readonly/>
+                        @endif
+                    @endforeach
+
                     </div>
                     <div class="form-group ">
                     <label class="control-label " for="course">
                     Курс
                     </label>
-                    <input class="form-control" id="course" name="course" type="text" readonly/>
+                    @foreach ($stream as $s)
+                    @if ($s->id==$student->id_stream)
+                    <input class="form-control"   value="{{$s->year}}" id="course" name="course" type="text" readonly/>
+                    @endif
+                     @endforeach
+                    
                     </div>
-                    <div class="form-group ">
-                    <label class="control-label " for="text9">
-                    Группа
-                    </label>
-                    <input class="form-control" id="text9" name="text9" type="text" readonly/>
-                    </div>
-                    <div class="form-group ">
-                    <label class="control-label " for="form_payment">
-                    Форма оплаты
-                    </label>
-                    <input class="form-control" id="form_payment" name="form_payment" type="text" readonly/>
-                    </div>
+
                     <div class="form-group ">
                     <label class="control-label " for="address">
                     Адрес
                     </label>
-                    <input class="form-control" id="address" name="address" type="text" readonly/>
-                    </div>
-                    <div class="form-group ">
-                    <label class="control-label " for="tel">
-                    Мобильный телефон
-                    </label>
-                    <input class="form-control" id="tel" name="tel" type="text" />
-                    </div>
-                    <div class="form-group ">
-                    <label class="control-label requiredField" for="email1">
-                    E-mail
-                    <span class="asteriskField">
-                        *
-                    </span>
-                    </label>
-                    <input class="form-control" id="email1" name="email1" type="text"/>
+                    <input class="form-control" id="address" value="{{$student->address}}"name="address" type="text" readonly/>
                     </div>
                     <div class="form-group">
                     <div>
+                        <input type="hidden" name="cert_id" value="{{$cerf->id}}">
+                        <input type="hidden" name="student_id" value="{{$student->id}}">
                     <button class="btn btn-success " name="submit" type="submit">
-                        <a href="/" style="color: white;"> Подать Заявление </a>
+                        
+                        <a style="color: white;"> Подать Заявление </a>
                     
                     </button>
                     </div>

@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Nationality extends Model
 {
     use HasFactory;
+    protected $table = 'nationalities';
+    public $timestamps = true;
+    protected $fillable = [
+        'name'
+    ];
 }
